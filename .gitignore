@@ -1,4 +1,8 @@
 *.sw?
 dist/*
 node_modules/
+
+# chrome extension excludes
 builds/
+*.pem
+*.crx
