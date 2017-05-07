@@ -50,7 +50,7 @@ var CANVAS_READ = {
 	},
 	...
 } */
-var data = {};
+window.data = {};
 
 var tabData = {
 	// initialize tab-level data

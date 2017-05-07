@@ -317,7 +317,8 @@
 
 	[
 		navigator,
-		window.screen
+		window.screen,
+		RTCPeerConnection,
 	].forEach(function (obj) {
 		// trap all enumerable keys on the object and its prototype chain
 		for (var prop in obj) { // jshint ignore:line

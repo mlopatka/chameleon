@@ -19,9 +19,9 @@ var _ = require('underscore');
 
 var score = require('../lib/score').scoreScriptActivity,
 	sendMessage = require('../lib/content_script_utils').sendMessage,
-	tabData = require('../lib/tabdata'),
 	whitelist = require('../lib/whitelist');
 
+window.tabData = require('../lib/tabdata')
 
 // functions ///////////////////////////////////////////////////////////////////
 
@@ -157,7 +157,6 @@ function onMessage(request, sender, sendResponse) {
 
 function onNavigation(details) {
 	var tab_id = details.tabId;
-
 	// top-level page navigation only
 	if (details.frameId !== 0 || tab_id < 1) {
 		return;
